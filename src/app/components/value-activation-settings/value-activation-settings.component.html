@@ -1,0 +1,9 @@
+<div class="factor-list">
+  <div class="factor-activate-control" *ngFor="let f of factors">
+    <button [ngClass]="{ highlightPrimary: activePrimary === f }"
+      (click)="activatePrimary(f)"></button>
+    <span>{{f}}</span>
+    <button [ngClass]="{ highlightSecondary: activeSecondary === f }"
+      (click)="activateSecondary(f)"></button>
+  </div>
+</div>

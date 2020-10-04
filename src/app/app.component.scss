@@ -1,0 +1,42 @@
+@import 'colors.scss';
+
+.root {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 36px auto;
+  background-color: $shade5;
+
+  header {
+    background-color: $white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 0 4px 3px $shadow;
+
+    .header-section-left {
+
+      button.menuTrigger {
+        width: 30px;
+        height: 25px;
+        margin: 0 4px;
+        border: 1px solid $shade3;
+        background-color: $shade5;
+      }
+    }
+    .title {
+      font-weight: bold;
+      color: $shade1;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+}

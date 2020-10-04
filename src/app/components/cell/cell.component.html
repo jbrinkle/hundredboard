@@ -1,0 +1,5 @@
+<div [ngClass]="{
+  primaryActive: highlightPrimary && !highlightBoth,
+  secondaryActive: highlightSecondary && !highlightBoth,
+  bothActive: highlightBoth
+}">{{value}}</div>

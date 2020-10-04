@@ -1,0 +1,42 @@
+@import '../../colors.scss';
+
+:host {
+  width: 300px;
+  height: 100%;
+  position: relative;
+
+  div.factor-list {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    position: absolute;
+
+    div.factor-activate-control {
+      width: 100%;
+      height: 45px;
+      margin-top: 6px;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      align-items: center;
+
+      button {
+        height: 40px;
+        width: 40px;
+        border: 1px solid $shade3;
+        background-color: $shade4;
+
+        &.highlightPrimary {
+          background-color: $highlightPrimary;
+        }
+
+        &.highlightSecondary {
+          background-color: $highlightSecondary;
+        }
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}
