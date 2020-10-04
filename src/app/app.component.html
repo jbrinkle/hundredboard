@@ -1,9 +1,10 @@
 <div class="root">
   <header>
     <div class="header-section header-section-side header-section-left">
-      <button class="menuTrigger">=</button>
+      <button class="menuTrigger"
+        (click)="toggleGameMenu()">=</button>
     </div>
-    <div class="header-section"><div class="title">100Board</div></div>
+    <div class="header-section"><div class="title">{{title}}</div></div>
     <div class="header-section header-section-side header-section-right">
       <!-- TBD -->
     </div>
@@ -13,4 +14,8 @@
     <app-value-activation-settings></app-value-activation-settings>
     <app-board></app-board>
   </div>
+</div>
+
+<div [ngClass]="{ 'game-menu-host': true, 'game-menu-active': isGameMenuOpen }">
+  <app-game-menu [(isMenuOpen)]="isGameMenuOpen"></app-game-menu>
 </div>

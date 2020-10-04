@@ -40,3 +40,14 @@
     height: 100%;
   }
 }
+
+div.game-menu-host {
+  position: absolute;
+  top: 31px;
+  left: 4px;
+  display: none;
+
+  &.game-menu-active {
+    display: block;
+  }
+}

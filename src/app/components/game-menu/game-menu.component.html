@@ -1,0 +1,6 @@
+<div class="game-menu" (blur)="closeMenu()">
+  <div class="game-menu-item"
+    (click)="toggleGameMode()">Turn {{ nextToggleState }} game mode</div>
+  <div [ngClass]="{'game-menu-item': true, 'menu-item-disabled': !isGameModeEnabled}"
+    (click)="resetGame()">Reset game</div>
+</div>

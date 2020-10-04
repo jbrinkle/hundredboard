@@ -1,5 +1,8 @@
 <div [ngClass]="{
-  primaryActive: highlightPrimary && !highlightBoth,
-  secondaryActive: highlightSecondary && !highlightBoth,
-  bothActive: highlightBoth
-}">{{value}}</div>
+    primaryActive: highlightPrimary && !highlightBoth && (gameModeEnabled ? isClicked : true),
+    secondaryActive: highlightSecondary && !highlightBoth && (gameModeEnabled ? isClicked : true),
+    bothActive: highlightBoth && (gameModeEnabled ? isClicked : true),
+    wrongSelection: gameModeEnabled && isClicked && !highlightPrimary && !highlightSecondary
+  }"
+  (click)="showGameHighlight()"
+>{{value}}</div>

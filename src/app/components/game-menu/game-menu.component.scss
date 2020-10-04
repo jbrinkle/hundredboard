@@ -1,0 +1,23 @@
+@import '../../colors.scss';
+
+div.game-menu {
+  border: 1px solid $shade3;
+  background-color: $white;
+
+  div.game-menu-item {
+    height: 45px;
+    padding: 22px 25px 0 10px;
+
+    &:hover {
+      background-color: $highlightPrimary;
+      cursor: pointer;
+    }
+
+    &.menu-item-disabled {
+      color: $shade4;
+    }
+    &.menu-item-disabled:hover {
+      background-color: transparent;
+    }
+  }
+}
