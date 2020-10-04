@@ -1,15 +1,23 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ValueActivationService {
 
-  primary$: Subject<number> = new Subject();
-  secondary$: Subject<number> = new Subject();
+  private primary$: Subject<number> = new Subject();
+  private secondary$: Subject<number> = new Subject();
 
   constructor() { }
+
+  get primaryActivations(): Observable<number> {
+    return this.primary$.asObservable();
+  }
+
+  get secondaryActivations(): Observable<number> {
+    return this.secondary$.asObservable();
+  }
 
   setPrimary(factor) {
     this.primary$.next(factor);
