@@ -1,5 +1,7 @@
 # Hundredboard
 
+This is a math tool/game for elementary grades. It's a 10x10 matrix of numbers 1-100. Toggles along the left edge highlight values that have the toggle number as a factor. A "game" mode is included that hides the highlighting until the user/student clicks on the matrix cells that should be highlighted.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
 
 ## Development server
